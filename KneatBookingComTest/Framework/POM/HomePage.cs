@@ -58,9 +58,7 @@ namespace KneatBookingComTest.Framework.POM
         {
             
             Utilities.MoveToElement(Driver, FilterCenterLocatorID);
-            //Utilities.WaitandClickXpath(Driver, ShowAllXpath);
             Utilities.WaitAndClickEitherXpath(Driver, ShowAllXpath, ShowAllFilterXpath);
-            //Utilities.WaitandClickXpath(Driver, SpaAndWellnessXpath);
             
         }
         public static void SelectFiveStarRating(IWebDriver Driver)

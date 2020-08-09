@@ -11,6 +11,7 @@ namespace KneatBookingComTest.Framework.SetUp
 
         #region Browser
         public static string BaseBrowser = "Chrome";
+        //public static string BaseBrowser = "Firefox";
 
         #endregion
     }

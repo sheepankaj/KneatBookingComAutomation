@@ -70,10 +70,9 @@ namespace KneatBookingComTest.Framework.Common
             actions.Perform();
         }
 
-        public static void VerifyTextXpath(IWebDriver Driver, string ElementID,string ActualText, string FalseText)
+        public static void VerifyTextXpath(IWebDriver Driver, string ElementID,string ExpectedText, string FalseText)
         {
-            string ExpectedText = Driver.FindElement(By.XPath(ElementID)).Text;
-            Debug.WriteLine(ExpectedText);
+            string ActualText = Driver.FindElement(By.XPath(ElementID)).Text;
             Thread.Sleep(5000);
             Assert.Equal(ActualText, ExpectedText);
             Assert.DoesNotMatch(ActualText, FalseText);
@@ -83,15 +82,11 @@ namespace KneatBookingComTest.Framework.Common
         public static void WaitAndClickEitherXpath(IWebDriver Driver, string FirstElementID, string SecondElementID)
         {
             string ButtonText = Driver.FindElement(By.XPath(FirstElementID)).Text;
-            //string SecondButtonText = Driver.FindElement(By.XPath(SecondElementID)).Text;
-            //Debug.WriteLine(FirstButtonText);
-            //Debug.Write(SecondButtonText);
 
             if( ButtonText.Contains("Show all 13"))
             {
                 var FirstXpath = Driver.FindElement(By.XPath(FirstElementID));
                 FirstXpath.Click();
-                //WaitandClickXpath(Driver, HomePage.SpaAndWellnessXpath);
 
             }
             else if(ButtonText.Contains("Show more"))
