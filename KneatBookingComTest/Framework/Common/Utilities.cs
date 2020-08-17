@@ -17,8 +17,6 @@ namespace KneatBookingComTest.Framework.Common
             Driver.Navigate().GoToUrl(TestBase.BaseUrl);
             Driver.Manage().Window.Maximize();
         }
-
-        
         public static void WaitandClickID(IWebDriver Driver, string Element, int SleepTime=3)
         {
             var webDriverWait = new WebDriverWait(Driver, TimeSpan.FromSeconds(SleepTime));
