@@ -36,6 +36,8 @@ namespace KneatBookingComTest.UITestCases
             output.WriteLine($"Location entered successfully");
             HomePage.SelectDateFromPopUpView(Driver);
             output.WriteLine($"Date selected successfully");
+            HomePage.CheckAdultAndRoomCounts(Driver);
+            output.WriteLine($"Adult and Room counts are checked successfully");
         }
 
         [Fact]
@@ -46,6 +48,8 @@ namespace KneatBookingComTest.UITestCases
             output.WriteLine($"Location entered successfully");
             HomePage.SelectDateFromPopUpView(Driver);
             output.WriteLine($"Date selected successfully");
+            HomePage.CheckAdultAndRoomCounts(Driver);
+            output.WriteLine($"Adult and Room counts are checked successfully");
             HomePage.SelectSpaandWellnessFilters(Driver);
             output.WriteLine($"Spa and Wellness center filter is selected successfully");
            
@@ -69,6 +73,8 @@ namespace KneatBookingComTest.UITestCases
             output.WriteLine($"Location entered successfully");
             HomePage.SelectDateFromPopUpView(Driver);
             output.WriteLine($"Date selected successfully");
+            HomePage.CheckAdultAndRoomCounts(Driver);
+            output.WriteLine($"Adult and Room counts are checked successfully");
             HomePage.SelectSaunaFilter(Driver);
             output.WriteLine($"Sauna filter is selected successfully");
             HomePage.CheckLimerickStrandHotelName(Driver);

@@ -104,8 +104,33 @@ namespace KneatBookingComTest.Framework.Common
             }
 
         }
+
+        public static void CheckAndClickXpath(IWebDriver Driver, string FirstElement, string SecondElement)
+        {
+            string AdultButtonText = Driver.FindElement(By.XPath(FirstElement)).Text;
+            string RoomButtonText = Driver.FindElement(By.XPath(SecondElement)).Text;
+
+            if(AdultButtonText.Contains("0") && RoomButtonText.Contains("0"))
+            {
+                var FirstTextXpath = Driver.FindElement(By.XPath(FirstElement));
+                FirstTextXpath.Click();
+                FirstTextXpath.Click();
+                var SecondTextXpath = Driver.FindElement(By.XPath(SecondElement));
+                SecondTextXpath.Click();
+
+            }
+            else if(AdultButtonText.Contains("1") && RoomButtonText.Contains("0"))
+            {
+                var FirstTextXpath = Driver.FindElement(By.XPath(FirstElement));
+                FirstTextXpath.Click();
+                var SecondTextXpath = Driver.FindElement(By.XPath(SecondElement));
+                SecondTextXpath.Click();
+            }
+            else
+            {
+                WaitandClickXpath(Driver, HomePage.SearchButtonXpath);
+            }
+        }
         
-
-
     }
 }

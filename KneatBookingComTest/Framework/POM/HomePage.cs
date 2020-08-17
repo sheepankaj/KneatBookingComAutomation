@@ -18,6 +18,12 @@ namespace KneatBookingComTest.Framework.POM
         public static string CheckOutXpath= "//*[@id='frm']/div[1]/div[2]/div[1]/div[3]/div/div/div/div/div[1]";
         public static string CheckOutDateXpath = "/html/body/div[5]/div/div/div[2]/form/div[1]/div[2]/div[2]/div/div/div[3]/div[2]/table/tbody/tr[3]/td[1]";
         public static string SearchButtonXpath = "//*[@id='frm']/div[1]/div[4]/div[2]/button";
+        public static string AdultButtonXpath = "//*[@id='xp__guests__toggle']";
+        public static string AdultCountsTextXpath = "//*[@id='xp__guests__inputs-container']/div/div/div[1]/div"; //Adults 2
+        public static string Adult2TextXpath = "//*[@id='xp__guests__inputs-container']/div/div/div[1]/div/div[2]/span[1]"; //2
+        public static string RoomCountsTextXpath = "//*[@id='xp__guests__inputs-container']/div/div/div[3]/div"; //Room 1
+        public static string AdultCountPlusButtonXpath = "//*[@id='xp__guests__inputs-container']/div/div/div[1]/div/div[2]/button[2]";
+        public static string RoomCountPlusButtonXpath = "//*[@id='xp__guests__inputs-container']/div/div/div[3]/div/div[2]/button[2]";
         #endregion
 
         #region Filter for Spa and Fitness Center
@@ -51,8 +57,13 @@ namespace KneatBookingComTest.Framework.POM
             Utilities.WaitandClickCSSSelector(Driver, NextMonthButtonJS);
             Utilities.WaitandClickXpath(Driver, CheckInCurrentDateXpath);
             Utilities.WaitandClickXpath(Driver, CheckOutDateXpath);
-            Utilities.WaitandClickXpath(Driver, SearchButtonXpath);
+            //Utilities.WaitandClickXpath(Driver, SearchButtonXpath);
 
+        }
+        public static void CheckAdultAndRoomCounts(IWebDriver Driver)
+        {
+            Utilities.WaitandClickXpath(Driver, AdultButtonXpath);
+            Utilities.CheckAndClickXpath(Driver, Adult2TextXpath, RoomCountsTextXpath);
         }
         public static void SelectSpaandWellnessFilters(IWebDriver Driver)
         {
