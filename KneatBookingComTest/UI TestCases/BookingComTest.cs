@@ -20,6 +20,7 @@ namespace KneatBookingComTest.UITestCases
             Driver = BrowserType.Initialize();
 
         }
+
         [Fact]
         public void TC_OpenUrl()
         {

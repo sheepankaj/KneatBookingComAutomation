@@ -26,6 +26,7 @@ namespace KneatBookingComTest.Framework.POM
         public static string RoomCountPlusButtonXpath = "//*[@id='xp__guests__inputs-container']/div/div/div[3]/div/div[2]/button[2]";
         #endregion
 
+
         #region Filter for Spa and Fitness Center
         public static string FilterCenterLocatorID= "filter_facilities";
         public static string ShowAllXpath = "//*[@id='filter_facilities']/div[2]/button[1]";

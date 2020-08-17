@@ -126,6 +126,7 @@ namespace KneatBookingComTest.Framework.Common
                 var SecondTextXpath = Driver.FindElement(By.XPath(SecondElement));
                 SecondTextXpath.Click();
             }
+
             else
             {
                 WaitandClickXpath(Driver, HomePage.SearchButtonXpath);
